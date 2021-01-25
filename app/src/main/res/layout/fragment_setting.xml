@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.setting.SettingFragment">
+
+    <TextView
+        android:id="@+id/text_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_current_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/current_username"
+        app:layout_constraintTop_toBottomOf="@id/text_setting">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_user_name"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:background="@color/white"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_current_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/current_nubmer_of_added_patients"
+        app:layout_constraintTop_toBottomOf="@id/text_current_user_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_current_number"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:text="@string/_0"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_max_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/max_nubmer_of_patients_allowed"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/text_current_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_max_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_5"
+            android:background="@color/white"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_max_number" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
